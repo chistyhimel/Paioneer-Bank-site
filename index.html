@@ -11,22 +11,26 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="style.css" />
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
   </head>
   <body>
     <!-- login area -->
 
     <div id="login-area">
-      <h1 class="text-center">Welcome to Pioneer Bank</h1>
+      <i class="fas fa-university fa-5x text-center d-block pb-4 "></i>
+      <h1 class="text-center font-weight-bold">Pioneer Bank</h1>
       <div class="submit-area container">
         <h4>Login</h4>
         <input
+          id="email"
           type="email"
           name="email"
-          class="form-control"
-          placeholder="Email"
+          class="form-control "
+          placeholder="Email" 
         />
         <br />
         <input
+          id="password"
           type="password"
           name="password"
           class="form-control"
@@ -91,7 +95,7 @@
             <input
               id="withdrawAmount"
               type="text"
-              placeholder="$amount you want to deposite"
+              placeholder="$amount you want to withdraw"
               class="form-control"
             />
             <br />
