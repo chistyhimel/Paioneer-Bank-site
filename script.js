@@ -15,6 +15,9 @@ const addDepositBtn = document.getElementById('addDeposit');
 addDepositBtn.addEventListener('click',function(){
 
   const depositeAmount = parseFloat(document.getElementById('depositAmount').value);
+  if(document.getElementById('depositAmount').value===''){
+    alert('Please enter your deposite')
+  }else{
   const currentDeposit = parseFloat(document.getElementById('currentDeposit').innerText);
   const totalDeposit = depositeAmount + currentDeposit;
   document.getElementById('currentDeposit').innerText = totalDeposit;
@@ -23,6 +26,7 @@ addDepositBtn.addEventListener('click',function(){
   const totalBalance = depositeAmount + currentBalance;
   document.getElementById('currentBalance').innerText = totalBalance;
   document.getElementById('depositAmount').value='';
+  }
 })
 
 
@@ -31,6 +35,9 @@ addDepositBtn.addEventListener('click',function(){
 const addWithdrawBtn = document.getElementById('addWithdraw');
 addWithdrawBtn.addEventListener('click',function(){
   const withdrawAmount = parseFloat(document.getElementById('withdrawAmount').value);
+  if(document.getElementById('withdrawAmount').value===''){
+    alert('Please enter amount you want to withdarw')
+  }else{
   const currentWithdraw = parseFloat(document.getElementById('currentWithdraw').innerText);
   const totalWithdraw = withdrawAmount + currentWithdraw;
   document.getElementById('currentWithdraw').innerText = totalWithdraw;
@@ -39,4 +46,6 @@ addWithdrawBtn.addEventListener('click',function(){
   const totalBalance = currentBalance-withdrawAmount;
   document.getElementById('currentBalance').innerText = totalBalance;
   document.getElementById('withdrawAmount').value='';
+  }
 })
+
